@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: leadbot-backend
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:your-very-long-jwt-secret-key-your-very-long-jwt-secret-key}
+  expire-ms: 86400000
+
+app:
+  cors:
+    allowed-origins:
+      - "http://localhost:5173"
+      - "http://127.0.0.1:5173"
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
